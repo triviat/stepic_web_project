@@ -1,4 +1,4 @@
-def app(env: dict, start_response: callable(object)) -> tuple[str]:
+def app(env, start_response):
     status = '200 OK'
     headers = [('Content-Type', 'text/plain')]
 
@@ -8,6 +8,6 @@ def app(env: dict, start_response: callable(object)) -> tuple[str]:
         params = 'ERROR! There is no params.'
 
     body = params.lstrip('/?').split('&')
-    print(body)
+
     start_response(status, headers)
-    return tuple(*body)
+    return body
