@@ -20,7 +20,7 @@
 
 <li>
 <p>Создание и активация виртуального окружение web</p>
-<code>python3 -m venv web</code>
+<p><code>python3 -m venv web</code></p>
 <code>. ./web/bin/activate</code>
 </li>
 
