@@ -38,9 +38,9 @@
 <ul>
 <h2>Настройка django:</h2>
 
-<li><code>
+<li>
 <p>Создание django-проекта</p>
-django-admin startproject ask</code>
+<code>django-admin startproject ask</code>
 </li>
 
 <li>
