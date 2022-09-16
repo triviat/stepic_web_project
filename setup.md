@@ -3,28 +3,45 @@
 <ul>
 <h2>Подготовка сервера:</h2>
 
-[//]: # (Клонирование проекта с github)
+<p>Клонирование проекта с github</p>
 <li><code>sudo git clone https://github.com/triviat/stepic_web_project web</code></li>
 
-[//]: # (Переход в директорию проекта)
+<p>Переход в директорию проекта</p>
 <li><code>cd web</code></li>
 
-[//]: # (Запуск init скрипта)
+<p>Установка python3.X-venv (где X - версия python) и nginx</p>
+<li><code>sudo apt install python3.X-venv nginx</code></li>
+
+<p>Создание и активация виртуального окружение web</p>
+<li><code>python3 -m venv web</code></li>
+<li><code>. ./web/bin/activate</code></li>
+
+<p>Установка django и gunicorn</p>
+<li><code>pip install django gunicorn</code></li>
+
+<p>Запуск init скрипта</p>
 <li><code>sudo bash init.sh</code></li>
 </ul>
 
 <ul>
-<h2>Установка и настройка django:</h2>
+<h2>Настройка django:</h2>
 
-[//]: # (Создание django-проекта)
+<p>Создание django-проекта</p>
 <li><code>django-admin startproject ask</code></li>
 
-[//]: # (Переход к файлу администрирования manage.py)
+<p>Переход к файлу администрирования manage.py</p>
 <li><code>cd ask</code></li>
 
-[//]: # (Создание приложения qa)
+<p>Создание приложения qa</p>
 <li><code>python manage.py startapp qa</code></li>
 
-[//]: # (Добавление приложения в настройки проекта)
+<p>Добавление приложения в настройки проекта</p>
 <li>В файл <code>~/web/ask/ask/settings.py</code> в <b>INSTALLED_APPS</b> добавить приложение <b>'qa'</b></li>
+</ul>
+
+<ul>
+<h2>Установка и настройка gunicorn:</h2>
+
+<p>Установка gunicorn</p>
+<li><code>pip install gunicorn</code></li>
 </ul>
